@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pmonterosExamen.views.login"
+             Title="login">
+    <VerticalStackLayout>
+      
+
+        <!-- Logo en la parte superior -->
+        <Image Source="uisrael.png" 
+               HeightRequest="100" 
+               HorizontalOptions="Center" />
+
+        <!-- Título -->
+        <Label Text="LOGIN"
+               TextColor="Red"
+               FontSize="20"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+
+        <!-- Aquí puedes seguir agregando contenido -->
+
+        <Grid ColumnDefinitions="Auto, *" RowDefinitions="Auto, Auto" Padding="10">
+            <!-- Fila 1 -->
+            <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="usuarioEntry" Placeholder="Ingrese usuario" Grid.Row="0" Grid.Column="1" />
+
+            <!-- Fila 2 -->
+            <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" />
+            <Entry x:Name="contrasenaEntry" Placeholder="Ingrese contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1" />
+        </Grid>
+
+        <!-- Botón de inicio de sesión -->
+        <Button Text="Iniciar Sesión" Clicked="OnLoginClicked" />
+
+        <!-- Mensaje -->
+        <Label x:Name="mensajeLabel" TextColor="Red" HorizontalOptions="Center" />
+
+
+        
+    </VerticalStackLayout>
+</ContentPage>
